@@ -65,7 +65,7 @@ template "#{node['kibana']['installdir']}/current/config.js" do
 end
 
 link "#{node['kibana']['installdir']}/current/app/dashboards/default.json" do
-  to "blank.json"
+  to "default.json"
   only_if { !File::symlink?("#{node['kibana']['installdir']}/current/app/dashboards/default.json") }
 end
 
