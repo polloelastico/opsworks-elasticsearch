@@ -17,7 +17,7 @@ which will check whether _Elasticsearch_ is running, reachable by HTTP and the c
 in your run list first.)
 
 If you include the `elasticsearch::aws` recipe, the
-[AWS Cloud Plugin](http://github.com/elasticsearch/elasticsearch-cloud-aws) will be installed on the node,
+[AWS Cloud Plugin](http://github.com/elasticsearch/cloud-aws) will be installed on the node,
 allowing you to use the _Amazon_ AWS-related features (node auto-discovery, etc).
 Set your AWS credentials either in the "elasticsearch/aws" data bag, or directly in the role/node configuration.
 Instead of using AWS access tokens, you can create the instance with a

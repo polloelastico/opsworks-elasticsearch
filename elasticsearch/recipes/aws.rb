@@ -1,3 +1,3 @@
 node.default[:elasticsearch][:plugin][:mandatory] = Array(node[:elasticsearch][:plugin][:mandatory] | ['cloud-aws'])
 
-install_plugin "cloud-aws/#{node.elasticsearch['plugins']['cloud-aws']['version']}"
+install_plugin "cloud-aws"
