@@ -32,7 +32,10 @@ default.elasticsearch['plugins']['cloud-aws']['version'] = '2.1.1'
 default.elasticsearch[:gateway][:type]               = ( aws['gateway']['type']                rescue nil )
 default.elasticsearch[:discovery][:type]             = ( aws['discovery']['type']              rescue nil )
 default.elasticsearch[:discovery][:ec2][:groups]     = ( aws['discovery']['ec2']['groups']     rescue nil )
+default.elasticsearch[:discovery][:ec2][:availability_zones]     = ( aws['discovery']['ec2']['availability_zones']     rescue nil )
 default.elasticsearch[:discovery][:ec2][:tag]        = ( aws['discovery']['ec2']['tag']        rescue {} )
+default.elasticsearch[:discovery][:ec2][:host_type]        = ( aws['discovery']['ec2']['host_type']        rescue {} )
+
 
 default.elasticsearch[:cloud][:aws][:access_key]     = ( aws['cloud']['aws']['access_key']     rescue nil )
 default.elasticsearch[:cloud][:aws][:secret_key]     = ( aws['cloud']['aws']['secret_key']     rescue nil )
