@@ -139,7 +139,14 @@ jmx.domain: elasticsearch
 <%- end -%>
 
 ################################## Custom #####################################
-
 <% node.elasticsearch[:custom_config].sort.each do |key, value| %>
 <%= key %>: <%= value %>
 <% end %>
+
+################################### Marvel Agent ##############################
+<%- if node.elasticsearch[:marvel] -%>
+marvel.agent.exporters:
+  id1:                                          # example of an http exporter
+    type: <%= print_value 'marvel.type' -%>     # exporter type, local or http
+    host: [ "<%= print_value 'marvel.host.export' -%>" ]     # host(s) to send data to over http or https
+<%- end -%>
